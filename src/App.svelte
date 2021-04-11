@@ -1,10 +1,29 @@
 <script>
-	export let name;
+	import * as reach from '@reach-sh/stdlib/ETH.d.ts';
+
+	let account;
+	let balance;
+
+	const connectWallet = async () => {
+		await getAccount();
+		await getBalance();
+	}
+
+	const getAccount = async () => {
+		account = await reach.getDefaultAccount();
+		console.log(account);
+	}
+
+	const getBalance = async () => {
+		balance = reach.formatCurrency(await reach.balanceOf(account), 4);
+		console.log(balance);
+	}
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<div>
+		<button on:click={connectWallet}>Connect Wallet</button>
+	</div>
 </main>
 
 <style>
@@ -13,13 +32,6 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
 	@media (min-width: 640px) {
