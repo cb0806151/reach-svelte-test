@@ -71,6 +71,9 @@ export default {
 		production && terser()
 	],
 	watch: {
+		chokidar: {
+            usePolling: true
+        },
 		clearScreen: false
 	}
 };
