@@ -1,5 +1,5 @@
 <script>
-	import * as reach from '@reach-sh/stdlib/ETH.d.ts';
+	import * as reach from '@reach-sh/stdlib/ALGO';
 
 	let account;
 	let balance;
