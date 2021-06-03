@@ -1,5 +1,7 @@
 <script>
-	import * as reach from '@reach-sh/stdlib/ALGO';
+	import {loadStdlib} from '@reach-sh/stdlib';
+	const reach = loadStdlib('ALGO');
+	reach.setWaitPort(false)
 
 	let account;
 	let balance;
