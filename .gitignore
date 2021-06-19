@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
-public/bundle.*
-package-lock.json
-yarn.lock
+public/build/bundle.*
+
+#reach
 src/reach
+src/docker-compose.yml.devnet
