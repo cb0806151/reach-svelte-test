@@ -8,7 +8,7 @@ To follow along and create the above repository, please see the [companion tutor
 This application is a showcase of connecting a Svelte application to an Algorand testnet using Reach and the Algosigner extension. It features connecting to a test wallet and then funding that test wallet with fake funds for use in testing contracts. I kept it rather simple to serve as a bite-sized introduction to dapp development by way of a feature common across many dapps during development.
 </p>
 </details>
-<details><summary><strong>Environment Setup Instructions</strong></summary>
+<details><summary><strong>Setup Instructions</strong></summary>
 <p>
 
 - clone the repository
