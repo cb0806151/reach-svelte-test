@@ -1,64 +1,36 @@
-# svelte app
+# Svelte + Reach: Connecting and Funding an Algorand Test Wallet 
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
+<details><summary>Description</summary>
+<p>  
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+To follow along and create the above repository, please see the [companion tutorial video.](https://youtu.be/Fvfw5-Jh52s)
 
-```bash
-npx degit sveltejs/template-webpack svelte-app
-cd svelte-app
-```
+This application is a showcase of connecting a Svelte application to an Algorand testnet using Reach and the Algosigner extension. It features connecting to a test wallet and then funding that test wallet with fake funds for use in testing contracts. I kept it rather simple to serve as a bite-sized introduction to dapp development by way of a feature common across many dapps during development.
+</p>
+</details>
+<details><summary>Environment Setup Instructions</summary>
+<p>
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+- clone the repository
+- open a terminal to the `reach-svelte-test` folder 
+- from there run the command `yarn install`
+- once that has completed run `cd src`
+- (if on Windows) run the `wsl` command to switch over to linux
+- run the `curl https://raw.githubusercontent.com/reach-sh/reach-lang/master/reach -o reach ; chmod +x reach` command to download reach into the src folder
+- run the `./reach version` command to ensure it installed
+- run the `REACH_CONNECTOR_MODE=ALGO ./reach devnet` command to start the testnet
+- start up a new terminal and navigate to the `reach-svelte-test` folder 
+- now run the `yarn dev` command to run the applications frontend
+- navigate to the localhost link given by the above command to view the application
 
+</p>
+</details>
 
-## Get started
+<details><summary>Further Reading & Challenges</summary>
+<p>  
 
-Install the dependencies...
+If you are just getting started with dapp development, I highly recommend the [Reach tutorial](https://docs.reach.sh/tut.html). It will show you the foundation of contract creation using Reach and go from contract interaction through the cli back here to the frontend by the end of the tutorial.  
 
-```bash
-cd svelte-app
-npm install
-```
-
-...then start webpack:
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+If after that you’d like a bit of a challenge, [Reach has a ton of dapp examples](https://github.com/reach-sh/reach-lang/tree/master/examples) that haven’t been turned into web applications; taking the time to transcribe them instead of just copy and pasting them will increase your familiarity with the Reach contract language while connecting those contracts to the frontend will increase your familiarity with the workflow of dapp development.
+</p>
+</details>
