@@ -1,31 +1,31 @@
 <script>
-	import {loadStdlib} from '@reach-sh/stdlib'
-	const reach = loadStdlib('ALGO')
+	import { loadStdlib } from "@reach-sh/stdlib";
+	const reach = loadStdlib("ALGO");
 
 	let account;
 	let balance;
 	let fundAmount;
 
 	const connectWallet = async () => {
-		await getAccount()
-		await getBalance()
-	}
+		await getAccount();
+		await getBalance();
+	};
 
 	const getAccount = async () => {
-		account = await reach.getDefaultAccount()
-		console.log(account)
-	}
+		account = await reach.createAccount();
+		console.log(account);
+	};
 
 	const getBalance = async () => {
-		let rawBalance = await reach.balanceOf(account)
-		balance = reach.formatCurrency(rawBalance, 4)
-		console.log(balance)
-	}
+		let rawBalance = await reach.balanceOf(account);
+		balance = reach.formatCurrency(rawBalance, 4);
+		console.log(balance);
+	};
 
 	const fundWallet = async () => {
-		await reach.fundFromFaucet(account, reach.parseCurrency(fundAmount))
-		await getBalance()
-	}
+		await reach.fundFromFaucet(account, reach.parseCurrency(fundAmount));
+		await getBalance();
+	};
 </script>
 
 <main>

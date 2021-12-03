@@ -16,6 +16,6 @@
     "dev": "webpack serve --content-base public"
   },
   "dependencies": {
-    "@reach-sh/stdlib": "^0.1.2-rc.56"
+    "@reach-sh/stdlib": "^0.1.7-rc.2"
   }
 }
